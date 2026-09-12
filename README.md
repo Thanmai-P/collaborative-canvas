@@ -1,6 +1,8 @@
-# Collaborative Canvas
+# Real-Time Collaborative Drawing Canvas
 
-Real-time multi-user drawing canvas built for the Flamapp AI frontend R&D assignment.
+A real-time collaborative drawing application built with TypeScript, HTML5 Canvas, Node.js, and Socket.IO.
+
+Multiple users can join the same room and draw together while seeing each other's cursor movements and drawing activity in real time.
 
 ## Features
 
