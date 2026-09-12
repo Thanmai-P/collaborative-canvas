@@ -381,6 +381,6 @@ io.on("connection", (socket) => {
     });
 });
 
-httpServer.listen(PORT, () => {
-    console.log(`Collaborative canvas server running on port ${PORT}`);
+httpServer.listen(PORT, "0.0.0.0", () => {
+        console.log(`Collaborative canvas server running on port ${PORT}`);
 });
