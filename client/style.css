@@ -1,0 +1,272 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #172033;
+    background: #f4f6fb;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    border: 1px solid #d6dbe7;
+    background: #ffffff;
+    color: #172033;
+    border-radius: 9px;
+    padding: 9px 13px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #f2f5fa;
+}
+
+button.active {
+    background: #172033;
+    color: #ffffff;
+    border-color: #172033;
+}
+
+.app-header {
+    min-height: 76px;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e6ef;
+}
+
+h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.app-header p {
+    margin: 4px 0 0;
+    color: #667085;
+    font-size: 13px;
+}
+
+.connection {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #667085;
+    font-size: 13px;
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #22c55e;
+}
+
+.app {
+    width: min(1400px, 96vw);
+    margin: 20px auto;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 13px;
+    background: #ffffff;
+    border: 1px solid #e2e6ef;
+    border-radius: 14px;
+    margin-bottom: 16px;
+}
+
+.toolbar-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.toolbar label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #667085;
+    font-size: 13px;
+}
+
+.width-control input {
+    width: 120px;
+}
+
+#colorPicker {
+    width: 38px;
+    height: 34px;
+    padding: 2px;
+    border: 1px solid #d6dbe7;
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.toolbar input[type="text"] {
+    width: 125px;
+    border: 1px solid #d6dbe7;
+    border-radius: 9px;
+    padding: 9px 10px;
+    outline: none;
+}
+
+.toolbar input[type="text"]:focus {
+    border-color: #667085;
+}
+
+.workspace {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 220px;
+    gap: 16px;
+}
+
+.canvas-card,
+.users-card {
+    background: #ffffff;
+    border: 1px solid #e2e6ef;
+    border-radius: 14px;
+}
+
+.canvas-card {
+    padding: 14px;
+    min-width: 0;
+}
+
+.canvas-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #cfd5df;
+    border-radius: 10px;
+    background: #ffffff;
+    touch-action: none;
+}
+
+#canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1000 / 650;
+    cursor: crosshair;
+}
+
+.cursor-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.remote-cursor {
+    position: absolute;
+    transform: translate(7px, 7px);
+    padding: 3px 6px;
+    border-radius: 5px;
+    background: var(--cursor-color);
+    color: #ffffff;
+    font-size: 10px;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.hint {
+    margin: 9px 2px 0;
+    color: #667085;
+    font-size: 12px;
+}
+
+.users-card {
+    padding: 15px;
+    height: fit-content;
+}
+
+.users-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.users-heading h2 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.users-heading span {
+    color: #667085;
+    font-size: 12px;
+}
+
+#userList {
+    list-style: none;
+    padding: 0;
+    margin: 14px 0 0;
+    display: grid;
+    gap: 9px;
+}
+
+#userList li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #344054;
+    font-size: 13px;
+}
+
+.user-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex: 0 0 auto;
+}
+
+@media (max-width: 850px) {
+    .workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .users-card {
+        order: -1;
+    }
+}
+
+@media (max-width: 600px) {
+    .app-header {
+        padding: 12px 15px;
+    }
+
+    .app {
+        width: 96vw;
+        margin: 12px auto;
+    }
+
+    .toolbar {
+        padding: 10px;
+    }
+
+    .room-controls {
+        width: 100%;
+    }
+
+    .toolbar input[type="text"] {
+        flex: 1;
+        min-width: 0;
+    }
+}

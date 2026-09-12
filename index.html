@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Canvas</title>
+</head>
+<body>
+    <header class="app-header">
+        <div>
+            <h1>Collaborative Canvas</h1>
+            <p id="roomLabel">Room: main</p>
+        </div>
+        <div class="connection">
+            <span class="status-dot"></span>
+            <span id="status">Connecting...</span>
+        </div>
+    </header>
+
+    <main class="app">
+        <section class="toolbar">
+            <div class="toolbar-group">
+                <label>
+                    Color
+                    <input id="colorPicker" type="color" value="#111111">
+                </label>
+
+                <label class="width-control">
+                    Width
+                    <input id="widthRange" type="range" min="1" max="40" value="5">
+                    <span id="widthValue">5px</span>
+                </label>
+
+                <button id="brushButton" class="tool-button active" type="button">Brush</button>
+                <button id="eraserButton" class="tool-button" type="button">Eraser</button>
+                <button id="undoButton" type="button">Undo</button>
+                <button id="redoButton" type="button">Redo</button>
+            </div>
+
+            <div class="toolbar-group room-controls">
+                <input id="userNameInput" type="text" maxlength="20" placeholder="Your name" value="Guest">
+                <input id="roomInput" type="text" maxlength="30" placeholder="Room" value="main">
+                <button id="joinButton" type="button">Join Room</button>
+            </div>
+        </section>
+
+        <section class="workspace">
+            <div class="canvas-card">
+                <div class="canvas-wrapper">
+                    <canvas id="canvas"></canvas>
+                    <div id="cursorLayer" class="cursor-layer"></div>
+                </div>
+                <p class="hint">
+                    Draw with your mouse or touch. Other users' strokes and cursors appear in real time.
+                </p>
+            </div>
+
+            <aside class="users-card">
+                <div class="users-heading">
+                    <h2>Online Users</h2>
+                    <span id="onlineCount">0 online</span>
+                </div>
+                <ul id="userList"></ul>
+            </aside>
+        </section>
+    </main>
+
+    <script type="module" src="/client/src/main.ts"></script>
+</body>
+</html>

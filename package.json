@@ -1,0 +1,26 @@
+{
+  "name": "collaborative_canvas",
+  "version": "1.0.0",
+  "description": "Real-time multi-user drawing canvas built for the Flamapp AI frontend R&D assignment.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "server": "tsx server/server.ts",
+    "build": "vite build",
+    "start": "tsx server/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "socket.io": "^4.8.3",
+    "socket.io-client": "^4.8.3",
+    "vite": "^8.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.2",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
+  }
+}

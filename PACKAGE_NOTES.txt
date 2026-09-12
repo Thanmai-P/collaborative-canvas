@@ -1,0 +1,17 @@
+# package.json changes
+
+Run these commands from the project root:
+
+npm install socket.io socket.io-client
+npm install --save-dev tsx @types/node
+
+Then make sure package.json contains:
+
+"scripts": {
+  "dev": "vite",
+  "server": "tsx server/server.ts",
+  "build": "vite build",
+  "start": "tsx server/server.ts"
+}
+
+Do not delete your existing dependencies.
