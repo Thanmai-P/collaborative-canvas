@@ -101,10 +101,7 @@ Start with two browser windows side by side. Show:
 
 ## Time spent
 
-Update this section before submission with your real time.
-
-Example:
-
-- Project implementation: ___ hours
-- Testing/debugging: ___ hours
-- Documentation/deployment: ___ hours
+- Project implementation: 10 hours
+- Testing/debugging: 5 hours
+- Documentation/deployment: 3 hours
+- Total: 18 hours over 3 days
